@@ -1,7 +1,5 @@
 package subway.controller.section;
 
-import subway.domain.station.Station;
-
 public class SectionRequest {
     private Long upStationId;
     private Long downStationId;

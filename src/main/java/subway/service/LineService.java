@@ -24,7 +24,6 @@ public class LineService {
 
     @Transactional
     public Line createLine(String name, String color, Long upStationId, Long downStationId, int distance) {
-        // TODO name, color로 전해주기?
         Line newLine = lineDao.save(new Line(name, color));
         Section newSection = sectionService.save(new Section(newLine.getId(), upStationId, downStationId, distance));
         return new Line(newLine.getId(), newLine.getName(), newLine.getColor(), new Sections(newSection));

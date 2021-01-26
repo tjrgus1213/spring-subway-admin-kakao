@@ -18,8 +18,8 @@ public class StationService {
         this.stationDao = stationDao;
     }
 
-    public Station createStation(StationRequest stationRequest) {
-        Station station = new Station(stationRequest.getName());
+    public Station createStation(String name) {
+        Station station = new Station(name);
         return stationDao.save(station);
     }
 
